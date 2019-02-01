@@ -12,6 +12,12 @@
 	background-color: #FFFFFF;
 }
 
+.section {
+	display: flex;
+	justify-content: center;
+	flex-
+}
+
 .easeUp {
 	position: relative;
 	animation: aniEaseUp ease-out 0.4s forwards normal;
