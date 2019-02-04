@@ -12,7 +12,7 @@ var gPopIn = TweenMax.staggerFromTo('.opaScroll', 0.5,
 );
 
 var bgSwitch = TweenMax.staggerFromTo('.bg', 0.1, {backgroundColor: "#FFFFFF", color: "#000000"}, {backgroundColor: "#28190E", color: "#FFFFFF"}, 1.4);
-var headerAnimation = TweenMax.staggerFromTo('#introBody', 1, {transform: "translate(0,-80px)"}, {transform: "translate(0px,0"}, 1.0);
+var headerAnimation = TweenMax.staggerFromTo('#introBody', 1, {"--faceBody-height":"-60%"}, {"--faceBody-height":"0%"}, 1.0);
 
 //var headerAnimation = TweenMax.staggerFromTo('#introBody', 1, {transform: "translate(0px,0px)"}, {transform: "translate(0px , calc( var(--faceWaves-height) - var(--faceBody-height))"}, 1.0);
 

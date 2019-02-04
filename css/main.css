@@ -1,5 +1,5 @@
 :root {
-	--faceBody-height: 174px;
+	--faceBody-height: -60%;
 	--faceWaves-height: 500px;
 }
 
@@ -198,6 +198,7 @@ blockquote{
 
 #introBody{
 	position: absolute;
+	transform: translate(0, var(--faceBody-height));
 
 }
 
