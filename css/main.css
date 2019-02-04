@@ -1,3 +1,8 @@
+:root {
+	--faceBody-height: 174px;
+	--faceWaves-height: 500px;
+}
+
 @keyframes aniEaseUp {
   0%   {
   	top: 40px;
@@ -12,10 +17,23 @@
 	background-color: #FFFFFF;
 }
 
+/* calc + 40vh */
+
 .section {
 	display: flex;
 	justify-content: center;
-	flex-
+   	flex-wrap: wrap;
+   	max-width: 100%;
+   	overflow-x: hidden;
+   }
+
+.split {
+	display: flex;
+  flex-direction: row;
+  flex-basis: 30%;
+  max-width: 80px !important;
+  flex: 1;
+
 }
 
 .easeUp {
@@ -40,7 +58,7 @@
 #img-hold{
 	float: left;
 	padding: 20px;
-	max-width: 30%;
+	max-width: 20%;
 }
 
 .insta-border {
@@ -129,30 +147,62 @@ blockquote{
 
 .head-container{
 	position: relative;
-	padding-top: 45%;
-	margin-top: 35%;
-
+	padding-top: var(--faceWaves-height);
 }
+
 .head-container::before {
 }
 
 .intro-background {
 	background-color: #705939;
 	padding-top: 1%;
-	margin-bottom: 10%;
 }
 
 .intro-faceBody {
 	position: absolute;
 	bottom: 0px;
 	left: 0;
-	top: 0%;
+	top: 0;
 }
 
 .intro-waves {
 	position: absolute;
 	left: 0;
-	top: 27%;
+	bottom: 0;
+}
+
+
+
+/*--*/
+
+/* #introContainer, #introBody, #introMask {
+	border: 5px solid pink;
+} */
+
+#introContainer{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+
+	
+	background-color: #705939;
+}
+
+#introFigure{
+	display: flex;
+	justify-content: center;
+	align-self: flex-end;
+
+	flex-direction: column;
+}
+
+#introBody{
+	position: absolute;
+
+}
+
+#introMask{
+	position: relative;
 
 }
 

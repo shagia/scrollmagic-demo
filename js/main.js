@@ -12,8 +12,9 @@ var gPopIn = TweenMax.staggerFromTo('.opaScroll', 0.5,
 );
 
 var bgSwitch = TweenMax.staggerFromTo('.bg', 0.1, {backgroundColor: "#FFFFFF", color: "#000000"}, {backgroundColor: "#28190E", color: "#FFFFFF"}, 1.4);
-var headerAnimation = TweenMax.staggerFromTo('.intro-faceBody', 1, {transform: "translate(0px,0px)"}, {transform: "translate(0px,40%)"}, 1.0);
+var headerAnimation = TweenMax.staggerFromTo('#introBody', 1, {transform: "translate(0,-80px)"}, {transform: "translate(0px,0"}, 1.0);
 
+//var headerAnimation = TweenMax.staggerFromTo('#introBody', 1, {transform: "translate(0px,0px)"}, {transform: "translate(0px , calc( var(--faceWaves-height) - var(--faceBody-height))"}, 1.0);
 
 var separationAnimation = TweenMax.staggerFromTo('.opaScrollSep', 1,
     {
@@ -50,7 +51,7 @@ var scene2 = new ScrollMagic.Scene({
 var scene3 = new ScrollMagic.Scene({
 		triggerElement: '#scene3',
 		duration: 500,
-		offset: 400,
+		offset: 100,
 		triggerHook: "onEnter",
 		reverse: true
 	})
@@ -70,7 +71,7 @@ var scene4 = new ScrollMagic.Scene({
 
 var scene5 = new ScrollMagic.Scene({
 		triggerElement: '#scene5',
-		duration: 500,
+		duration: 200,
 		offset: 200,
 		triggerHook: "onEnter",
 		reverse: true
@@ -85,7 +86,7 @@ var sceneOpen = new ScrollMagic.Scene({
 		reverse: true
 	})
 	
-	scene5.setPin("#intro");
+	sceneOpen.setPin("#introContainer");
 	sceneOpen.setTween(headerAnimation);
 	sceneOpen.addTo(controller);
 
