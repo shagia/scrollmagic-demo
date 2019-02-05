@@ -1,5 +1,5 @@
 :root {
-	--faceBody-height: -60%;
+	--faceBody-height: -70%;
 	--faceWaves-height: 500px;
 }
 
@@ -154,7 +154,7 @@ blockquote{
 }
 
 .intro-background {
-	background-color: #705939;
+	background-color: #735934;
 	padding-top: 1%;
 }
 
@@ -185,7 +185,7 @@ blockquote{
 	justify-content: center;
 
 	
-	background-color: #705939;
+	background-color: #735934;
 }
 
 #introFigure{
@@ -194,6 +194,16 @@ blockquote{
 	align-self: flex-end;
 
 	flex-direction: column;
+}
+
+/* Portrait */
+@media screen 
+  and (min-width: 320px) 
+  and (max-width: 812px){
+
+  	#introFigure{
+	align-self: center;
+}
 }
 
 #introBody{
