@@ -11,8 +11,12 @@ var gPopIn = TweenMax.staggerFromTo('.opaScroll', 0.5,
     0.4
 );
 
-var bgSwitch = TweenMax.staggerFromTo('.bg', 0.1, {backgroundColor: "#FFFFFF", color: "#000000"}, {backgroundColor: "#28190E", color: "#FFFFFF"}, 1.4);
+//var bgSwitch = TweenMax.staggerFromTo('.bg', 0.1, {backgroundColor: "#FFFFFF", color: "#000000"}, {backgroundColor: "#28190E", color: "#FFFFFF"}, 1.4);
 var headerAnimation = TweenMax.staggerFromTo('#introBody', 1, {"--faceBody-height":"-40%"}, {"--faceBody-height":"0%"}, 1.0);
+
+//var mirrorTL = TweenMax.staggerFromTo('.mi3', 1, {"opacity":"1"},{"opacity":"0"}, 0 )
+//var mirrorTL = TweenMax.staggerFrom('.mi3', 1, {"opacity":"1"}, 8); TweenMax.staggerTo('.mi3', 1, {"opacity":"0"}, 8)
+var mirrorTL = TweenMax.staggerFromTo('.mirror-img-img', 2, {autoAlpha:0, ease:Power4.easeInOut}, {autoAlpha:1, ease:Power4.easeInOut}, 1.4)
 
 //var headerAnimation = TweenMax.staggerFromTo('#introBody', 1, {transform: "translate(0px,0px)"}, {transform: "translate(0px , calc( var(--faceWaves-height) - var(--faceBody-height))"}, 1.0);
 
@@ -58,16 +62,15 @@ var scene3 = new ScrollMagic.Scene({
 	scene3.setTween(gPopIn);
 	scene3.addTo(controller);
 
-var scene4 = new ScrollMagic.Scene({
-		triggerElement: '#scene4',
-		duration: 2000,
-		offset: 800,
-		triggerHook: "onEnter",
-		reverse: true
+var splitScene = new ScrollMagic.Scene({
+		triggerElement: '#split-container',
+		triggerHook: 0,
+		duration: "100%",
+		offset: -300,
 	})
-	scene4.setPin("#scene4");
-	scene4.setTween(bgSwitch);
-	scene4.addTo(controller);
+	splitScene.setTween(mirrorTL);
+	splitScene.setPin("#split-r");
+	splitScene.addTo(controller);
 
 var scene5 = new ScrollMagic.Scene({
 		triggerElement: '#scene5',
