@@ -65,8 +65,8 @@ var scene3 = new ScrollMagic.Scene({
 var splitScene = new ScrollMagic.Scene({
 		triggerElement: '#split-container',
 		triggerHook: 0,
-		duration: "100%",
-		offset: -300,
+		duration: "80%",
+		offset: -100,
 	})
 	splitScene.setTween(mirrorTL);
 	splitScene.setPin("#split-r");
@@ -92,4 +92,6 @@ var sceneOpen = new ScrollMagic.Scene({
 	sceneOpen.setPin("#introContainer");
 	sceneOpen.setTween(headerAnimation);
 	sceneOpen.addTo(controller);
+
+
 
