@@ -17,6 +17,8 @@ var headerAnimation = TweenMax.staggerFromTo('#introBody', 1, {"--faceBody-heigh
 //var mirrorTL = TweenMax.staggerFromTo('.mi3', 1, {"opacity":"1"},{"opacity":"0"}, 0 )
 //var mirrorTL = TweenMax.staggerFrom('.mi3', 1, {"opacity":"1"}, 8); TweenMax.staggerTo('.mi3', 1, {"opacity":"0"}, 8)
 var mirrorTL = TweenMax.staggerFromTo('.mirror-img-img', 2, {autoAlpha:0, ease:Power4.easeInOut}, {autoAlpha:1, ease:Power4.easeInOut}, 1.4)
+var stopTLData = [".s-bg1", ".s-bg2"]
+var stopTL = TweenMax.staggerFromTo(stopTLData, 2, {autoAlpha:0, ease:Power4.easeInOut}, {autoAlpha:1, ease:Power4.easeInOut}, 1.4)
 
 //var headerAnimation = TweenMax.staggerFromTo('#introBody', 1, {transform: "translate(0px,0px)"}, {transform: "translate(0px , calc( var(--faceWaves-height) - var(--faceBody-height))"}, 1.0);
 
@@ -93,5 +95,14 @@ var sceneOpen = new ScrollMagic.Scene({
 	sceneOpen.setTween(headerAnimation);
 	sceneOpen.addTo(controller);
 
+var sceneStopIt = new ScrollMagic.Scene({
+		triggerElement: "#sceneStop",
+		duration: 800,
+		offset: 0,
+		triggerHook: "onEnter",
+		reverse: true,
+	})
 
+	sceneStopIt.setTween(stopTL);
+	sceneStopIt.addTo(controller);
 
