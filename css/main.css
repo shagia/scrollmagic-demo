@@ -1,6 +1,11 @@
 :root {
-	--faceBody-height: -70%;
-	--faceWaves-height: 500px;
+	--faceBody-height: -80%;
+	--faceWaves-height: 0;
+	font-size: 1.3em;
+}
+
+body {
+	margin: 0;
 }
 
 @keyframes aniEaseUp {
@@ -200,8 +205,10 @@ blockquote{
 	display: flex;
 	justify-content: center;
 
+	overflow: hidden;
 	
 	background-color: #735934;
+	background-image: url("../img/waves/front-waves.png");
 }
 
 #introFigure{
@@ -217,19 +224,18 @@ blockquote{
   and (min-width: 320px) 
   and (max-width: 812px){
 
-  	#introFigure{
-	align-self: center;
-}
 }
 
 #introBody{
 	position: absolute;
 	transform: translate(0, var(--faceBody-height));
+	align-self: center;
 
 }
 
 #introMask{
 	position: relative;
+	max-height: 400px !important;
 
 }
 

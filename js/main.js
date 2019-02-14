@@ -98,7 +98,7 @@ var sceneOpen = new ScrollMagic.Scene({
 var sceneStopIt = new ScrollMagic.Scene({
 		triggerElement: "#sceneStop",
 		duration: 800,
-		offset: 0,
+		offset: 160,
 		triggerHook: "onEnter",
 		reverse: true,
 	})
