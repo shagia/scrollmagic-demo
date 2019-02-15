@@ -1,7 +1,7 @@
 :root {
 	--faceBody-height: -80%;
 	--faceWaves-height: 0;
-	--grid-r-height: 0;
+	--grid-r-height: 0s;
 	font-size: 1.3em;
 }
 
@@ -45,6 +45,7 @@ p {
   flex: 1;
 
 }
+
 
 .easeUp {
 	position: relative;

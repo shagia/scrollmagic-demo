@@ -1,5 +1,16 @@
 var controller = new ScrollMagic.Controller();
 TweenMax.set(".opaScroll",{autoAlpha:0});
+var gridR = document.getElementById("split-l");
+var gridRHeight = gridR.getBoundingClientRect();
+console.log(gridRHeight);
+var rand = 3400
+
+function resize() {
+gridRHeight = gridR.getBoundingClientRect();
+console.log(gridRHeight);
+}
+
+window.onresize = resize;
 
 var gPopIn = TweenMax.staggerFromTo('.opaScroll', 0.5,
     {
@@ -67,7 +78,8 @@ var scene3 = new ScrollMagic.Scene({
 var splitScene = new ScrollMagic.Scene({
 		triggerElement: '#split-container',
 		triggerHook: 0,
-		duration: '1800',
+		duration: gridRHeight.height/1.5,
+		reverse: true,
 		offset: -50,
 	})
 	splitScene.setTween(mirrorTL);
