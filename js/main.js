@@ -67,8 +67,8 @@ var scene3 = new ScrollMagic.Scene({
 var splitScene = new ScrollMagic.Scene({
 		triggerElement: '#split-container',
 		triggerHook: 0,
-		duration: "80%",
-		offset: -100,
+		duration: '1800',
+		offset: -50,
 	})
 	splitScene.setTween(mirrorTL);
 	splitScene.setPin("#split-r");
