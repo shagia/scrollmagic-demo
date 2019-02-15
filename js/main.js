@@ -1,16 +1,37 @@
 var controller = new ScrollMagic.Controller();
 TweenMax.set(".opaScroll",{autoAlpha:0});
-var gridR = document.getElementById("split-l");
-var gridRHeight = gridR.getBoundingClientRect();
-console.log(gridRHeight);
-var rand = 3400
+const gridR = document.querySelector("#split-l");
+const gridRContent = document.querySelector("#split-l > section");
+/*var gridRHeight = gridR.getBoundingClientRect();
+var gridRHeightFinal = gridRHeight.height/1.5;*/
+var rand = 3400;
+var i8Viewport = "(max-width: 414px)";
 
-function resize() {
-gridRHeight = gridR.getBoundingClientRect();
-console.log(gridRHeight);
+function getDuration() {
+	return gridR.offsetHeight - 600;
+
 }
+console.log(getDuration())
 
-window.onresize = resize;
+/*function resize() {
+gridRHeight = gridR.getBoundingClientRect();
+
+var match = window.matchMedia(i8Viewport);
+
+if (match.matches) {
+	gridRHeightFinal = gridRHeight.height/1.2;
+	console.log("Resized to 0.9")
+}
+else {
+	gridRHeightFinal = gridRHeight.height/10.6;
+	console.log("Resized to 1.2")
+}
+console.log(gridRHeight);
+console.log(gridRHeightFinal);
+}*/
+
+/*window.onresize = resize;
+window.onload = resize;*/
 
 var gPopIn = TweenMax.staggerFromTo('.opaScroll', 0.5,
     {
@@ -78,7 +99,7 @@ var scene3 = new ScrollMagic.Scene({
 var splitScene = new ScrollMagic.Scene({
 		triggerElement: '#split-container',
 		triggerHook: 0,
-		duration: gridRHeight.height/1.5,
+		duration: getDuration,
 		reverse: true,
 		offset: -50,
 	})

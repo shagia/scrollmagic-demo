@@ -232,6 +232,8 @@ blockquote{
   and (min-width: 320px) 
   and (max-width: 812px){
 
+  	:root {font-size: 1em;}
+
 }
 
 #introBody{
