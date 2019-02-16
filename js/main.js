@@ -6,8 +6,8 @@ var rand = 3400;
 var i8Viewport = "(max-width: 414px)";
 
 function getDuration() {
+	//return gridR.offsetHeight - 600;
 	return gridR.offsetHeight - 600;
-
 }
 console.log(getDuration())
 
