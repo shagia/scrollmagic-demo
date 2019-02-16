@@ -22,7 +22,7 @@ var gPopIn = TweenMax.staggerFromTo('.opaScroll', 0.5,
 );
 
 //var bgSwitch = TweenMax.staggerFromTo('.bg', 0.1, {backgroundColor: "#FFFFFF", color: "#000000"}, {backgroundColor: "#28190E", color: "#FFFFFF"}, 1.4);
-var headerAnimation = TweenMax.staggerFromTo('#introBody', 1, {"--faceBody-height":"-40%"}, {"--faceBody-height":"0%"}, 1.0);
+var headerAnimation = TweenMax.staggerFromTo('#introBody', 1, {"--faceBody-height":"-35%"}, {"--faceBody-height":"0%"}, 1.0);
 
 //var mirrorTL = TweenMax.staggerFromTo('.mi3', 1, {"opacity":"1"},{"opacity":"0"}, 0 )
 //var mirrorTL = TweenMax.staggerFrom('.mi3', 1, {"opacity":"1"}, 8); TweenMax.staggerTo('.mi3', 1, {"opacity":"0"}, 8)
