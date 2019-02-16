@@ -3,10 +3,12 @@
 	--faceWaves-height: 0;
 	--grid-r-height: 0s;
 	font-size: 1.3em;
+	overflow-x: hidden;
 }
 
 body {
 	margin: 0;
+
 }
 
 @keyframes aniEaseUp {
@@ -38,7 +40,6 @@ p {
 	justify-content: center;
    	flex-wrap: wrap;
    	max-width: 100%;
-   	overflow-x: hidden;
    }
 
 .split {
@@ -146,6 +147,9 @@ p {
 
 }
 
+#split-r {
+}
+
 #scene4{
 	max-width: 100%;
 }
@@ -193,7 +197,7 @@ blockquote{
 #split-container{
 	display: grid;
     grid-gap: 2px;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
 }
 
 .intro-waves {
@@ -256,10 +260,15 @@ blockquote{
 
 }
 
+#mirror-canvas {
+
+}
+
 .mirror-base {
 	position: relative;
 	display: flex;
 	z-index: 1;
+
 }
 
 .mirror-base:first-child {
