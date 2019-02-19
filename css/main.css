@@ -37,19 +37,26 @@ p {
 
 .section {
 	display: flex;
-	justify-content: center;
-   	flex-wrap: wrap;
+	justify-content: space-between;
+   	flex-wrap: nowrap;
    	max-width: 100%;
    }
 
-.split {
-	display: flex;
-  flex-direction: row;
-  flex-basis: 30%;
-  max-width: 80px !important;
-  flex: 1;
 
+
+.split {
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
 }
+
+img .split {
+	display: inline;
+	margin: 0 auto;
+	max-width: 100%;
+	max-height: auto;
+}
+
 
 
 .easeUp {
@@ -83,6 +90,7 @@ p {
 }
 
 .imgFit{
+	display: inline;
 	object-fit: cover;
 	height: auto;
 	max-width: 100%;
