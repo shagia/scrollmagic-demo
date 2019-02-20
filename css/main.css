@@ -57,27 +57,31 @@ img .split {
 	max-height: auto;
 }
 
-.insta1 {
+.insta-container {
 	position: relative;
 	z-index: -1;
-	float: right;
-	/*right: 50px;*/
-	max-width: 200px;
-	transform: rotate(10deg);
-	overflow: hidden;
+	max-width: 30%;
+
+	padding: 20px;
+	float: left;
+	
+}
+
+.insta1 {
+	transform: rotate(4deg);
 }
 
 @media screen 
   and (min-width: 320px) 
   and (max-width: 812px){
-
-  	.insta1 {
-	position: relative;
-	right: 0;
+.insta-container {
 	z-index: 0;
+	max-width: 80%;
+	margin: 0 auto;
+
+	padding: 20px;
 	float: none;
-	max-width: 50%;
-	transform: rotate(0);
+	
 }
 
 }
