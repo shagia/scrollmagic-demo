@@ -42,47 +42,16 @@ var separationAnimation = TweenMax.staggerFromTo('.opaScrollSep', 1,
     1
 );
 
-// create a scene
-var Scene = new ScrollMagic.Scene({
-		triggerElement: '#my-sticky-element',
-        duration: 400,    // the scene should last for a scroll distance of 100px
-        offset: 100,    // start this scene after scrolling for 50px
-        triggerHook: "onEnter",
-        reverse: true
-    })
-	Scene.setClassToggle("#my-sticky-element", "paragraphCent");
-	//Scene.setPin("#my-sticky-element");
-    Scene.addTo(controller); // assign the scene to the controller
-
-var scene2 = new ScrollMagic.Scene({
-		triggerElement: '#scene2',
-		duration: 0,
-		offset: 100,
-		triggerHook: "onEnter",
-		reverse: true
-	})
-	scene2.setClassToggle("#img-hold", "easeUp");
-	scene2.addTo(controller);
-
-var scene3 = new ScrollMagic.Scene({
-		triggerElement: '#scene3',
-		duration: 500,
-		offset: 100,
-		triggerHook: "onEnter",
-		reverse: true
-	})
-	scene3.setTween(gPopIn);
-	scene3.addTo(controller);
 
 var splitScene = new ScrollMagic.Scene({
 		triggerElement: '#split-container',
 		triggerHook: 0,
-		duration: getDuration,
+		duration: 1200,
 		reverse: true,
 		offset: -50,
 	})
+	splitScene.setClassToggle("#split-r", "mirror-fixed");
 	splitScene.setTween(mirrorTL);
-	splitScene.setPin("#split-r");
 	splitScene.addTo(controller);
 
 var scene5 = new ScrollMagic.Scene({

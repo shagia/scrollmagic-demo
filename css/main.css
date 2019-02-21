@@ -3,7 +3,6 @@
 	--faceWaves-height: 0;
 	--grid-r-height: 0s;
 	font-size: 1.3em;
-	overflow-x: hidden;
 }
 
 body {
@@ -57,19 +56,10 @@ img .split {
 	max-height: auto;
 }
 
-.insta-container {
-	position: relative;
-	z-index: -1;
-	max-width: 30%;
-
-	padding: 20px;
-	float: left;
-	
-}
-
 .insta1 {
 	transform: rotate(4deg);
 }
+
 
 @media screen 
   and (min-width: 320px) 
@@ -130,17 +120,6 @@ img .split {
 	flex-direction: column;
 }
 
-/* #scene4{
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: stretch;
-} */
-
-
-
 .lazy-h{
 	background-color: #D8D8D8;
 }
@@ -149,10 +128,6 @@ img .split {
 
 	color: rgba(0,0,0,0);
 	line-height: 23px;
-}
-
-
-#split-r {
 }
 
 #scene4{
@@ -199,16 +174,63 @@ blockquote{
 	top: 0;
 }
 
-#split-container{
+/*#split-container{
 	display: grid;
     grid-gap: 2px;
     grid-template-columns: 60% 40%;
+}*/
+#split-container{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+
+	max-width: 50%;
+}
+
+#mirror-canvas {
+}
+
+.scrollmagic-pin-spacer {
+}
+@media screen 
+  and (min-width: 320px) 
+  and (max-width: 812px){
+
+#split-container{
+
+}
+
+
+.scrollmagic-pin-spacer {
+}
+  	
+
 }
 
 .intro-waves {
 	position: absolute;
 	left: 0;
 	bottom: 0;
+}
+
+.paragraphContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+}
+
+/* .pImgContainer describes the image inside every .paragraphContainer tag, and ideally goes before p tags. */
+.pImgContainer {
+
+}
+
+.insta-container {
+	position: relative;
+	z-index: -1;
+	padding: 20px;
+	float: left;
+	
 }
 
 
@@ -266,11 +288,11 @@ blockquote{
 }
 
 #mirror-canvas {
+	max-width: 100%;
 
 }
 
 .mirror-base {
-	position: relative;
 	display: flex;
 	z-index: 1;
 
@@ -285,15 +307,22 @@ blockquote{
 
 }
 
+.mirror-fixed {
+	position: fixed;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
 .mirror-base-img{
 	position: absolute;
-
+	max-width: 50%;
 	z-index: 1;
 
 }
 .mirror-img-img{
 	position: absolute;
-
+	max-width: 50%;
 	z-index: 0;
 }
 
