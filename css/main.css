@@ -1,10 +1,11 @@
 /* make the container styles !important to override the YR site styles */
 
-/* make the container styles !important to override the YR site styles */
-
-/* make the container styles !important to override the YR site styles */
-/* make the container styles !important to override the YR site styles */
-
+.scrollmagic-pin-spacer {
+-webkit-transition: all .0s ease !important;
+    -moz-transition: all .0s ease !important;
+    -ms-transition: all .0s ease !important;
+    -o-transition: all .0s ease !important;
+}
 .waves-header{
  overflow: hidden !important; 
 }
